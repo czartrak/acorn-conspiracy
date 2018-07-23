@@ -1,6 +1,6 @@
 mission "Acorn Conspiracy 1"
 	name "The Acorn Shortage"
-	description "The hai are in a state of panic. They are running low on acorns and can't seem to grow more trees."
+	description "The Hai are in a state of panic. They are running low on acorns and can't seem to grow more trees."
 	landing
 	source
 		attributes "hai"
@@ -14,35 +14,35 @@ mission "Acorn Conspiracy 1"
 			`	You find a telescreen that's not crammed with giant squirrels and watch the newscast to find that there is some sort of acorn shortage.`
 			choice
 				`	(Find someone to explain what's happening)`
-				goto find
+					goto find
 				`	(Leave)`
-				decline
+					decline
 			
 			label find
-			`You visit the local governmental office. When you walk in the human governor for this planet greets you.`
-			`	"Hello there! How may I help you?"`
-			`	"What's happening here?" you ask "Well," he replies "It seems that the Hai are having a catastophic acorn shortage. Being large squirrels, that makes up most of their diet. So you can see how that would cause problems."
+			`You visit the local government office. When you walk in, the human dignitary for this planet greets you.`
+			`	"Hello there! How may I help you?" He says.`
+			`	"What's happening here?" you ask "Well," he replies "It seems that the Hai are having a catastrophic acorn shortage. Being large squirrels, that makes up most of their diet. So you can see how that would cause problems."
 			choice
 				`	"Can I do anything to help?"`
-				goto help
+					goto help
 				`	"Well, I'm sorry to hear that. Unfortunantly, I can't help them."
-				goto cant
+					goto cant
 			
 			label help
 			`	"Well you could see the Hai scientists. They may have leads to what's causing the problem."`
-			accept
+				accept
 			
 			label cant
 			`	"Well that's too bad. They could really use whatever help they could get. Are you sure you can't?"`
 			choice
 				`	"I'm sorry, I just cant. This really isn't my field of expertise."
-				decline
+					decline
 				`	"Well... I guess I could... What can I do?"`
-				
+					accept
 	on accept
 		log "The Hai are having an acorn shortage. I want to help get to the bottom of this"
 		set "Acorn Shortage 1"
-		fail
+			fail
 		
 mission "Acorn Conspiracy 2"
 	name "Seeing the Scientists"
@@ -61,9 +61,9 @@ mission "Acorn Conspiracy 2"
 			`	"We were told you want to help us get to the bottom of this shortage"`
 			choice
 				`	"Yes I do"`
-				goto yes
+					goto yes
 				`	"Yeah I am. Do you know anything about the shortage?"`
-				goto know
+					goto know
 			label yes
 			`	"Ah very good. Right through here please"`
 			label know
@@ -79,12 +79,12 @@ mission "Acorn Conspiracy 2"
 			`	"Can you do this for us?"`
 			choice
 				`	"Of course!"`
-				accept
+					accept
 				`	"Sorry, all this sciency stuff seems a tad bit out of my league."`
-				decline
+					decline
 		on complete
 			conversation
-				`	You have reached your first stop. You take the equipment the scientists gave you and start tesing trees. A few Hai approach you.`
+				`You have reached your first stop. You take the equipment the scientists gave you and start tesing trees. A few Hai approach you.`
 				`	"What are you doing?" one asks. "I'm testing trees to see why they've been dying."`
 				`	"Dying? The trees haven't been dying. They just... disappear."`
 				`	"Disappear?" you ask. "Correct. They seem to go away in the night." Something fishy's going on here, and you're going to find out what.`
